@@ -13,9 +13,11 @@
         android:theme="@style/Theme.NaverMapTest"
         tools:targetApi="31">
         <activity
+            android:name=".GooglemapPanoramaFragmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".GooglemapFragmentActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
