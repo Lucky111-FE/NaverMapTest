@@ -1,3 +1,5 @@
 <resources>
   <string name="app_name">NaverMapTest</string>
+
+  <string name="api_key">AIzaSyCz8OYmP9nlijX-SgX4qajyiYTpHxeKN_A</string>
 </resources>

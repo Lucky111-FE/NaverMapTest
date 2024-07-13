@@ -119,6 +119,8 @@ class MapFragmentActivity : FragmentActivity(), OnMapReadyCallback {
             polygon2.coords = secondHalf
             // PolyLine의 색깔은 파란색으로 지정
             polygon2.color = Color.BLUE
+            // Polygon1의 두께를 30으로 설정, width Default는 5
+            polygon2.width = 30
 
             // polygonOutline2의 좌표에 해당하는 Polygon Line을 Navermap에 적용
             polygonOutline2.map = naverMap
