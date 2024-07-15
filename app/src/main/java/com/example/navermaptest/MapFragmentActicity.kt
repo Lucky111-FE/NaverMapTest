@@ -19,6 +19,7 @@ import java.io.IOException
 private const val TAG = "MapFragmentActicity_싸피"
 class MapFragmentActivity : FragmentActivity(), OnMapReadyCallback {
     private var gpxCoordinates: List<LatLng>? = null
+    private var checkPoly = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -94,6 +95,18 @@ class MapFragmentActivity : FragmentActivity(), OnMapReadyCallback {
 
             // 라인의 테두리를 그리기 위한 PolyLine으로 coords 좌표는 polygon1과 동일하게 설정하고, 색깔을 다르게, 테두리로 그리기 위해 두께는 조금 더 두껍게 설정
             polygonOutline1.coords = firstHalf
+            polygon1.setOnClickListener { overlay ->
+                if(checkPoly){
+                    polygon1.setColor(Color.BLACK)
+                    polygon1.setMap(naverMap)
+                }
+                else{
+                    polygon1.setColor(Color.RED)
+                    polygon1.setMap(naverMap)
+                }
+                checkPoly = !checkPoly
+                true
+            }
             polygonOutline1.color = Color.WHITE
             polygonOutline1.width = 80
 

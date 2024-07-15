@@ -10,11 +10,11 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
 
-    startActivity(Intent(this, GooglemapPanoramaFragmentActivity::class.java))
+//    startActivity(Intent(this, GooglemapPanoramaFragmentActivity::class.java))
 
     // google 일반지도 호출하는 코드
 //    startActivity(Intent(this, GooglemapFragmentActivity::class.java))
     // naver지도 호출하는 activity로 넘어가는 코드
-//    startActivity(Intent(this, MapFragmentActivity::class.java))
+    startActivity(Intent(this, MapFragmentActivity::class.java))
   }
 }
